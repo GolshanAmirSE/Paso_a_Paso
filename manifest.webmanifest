@@ -1,7 +1,8 @@
 {
   "name": "Paso a paso · Español A1",
   "short_name": "Paso a paso",
-  "description": "Curso de español A1: libro interactivo con audio, traducción y práctica.",
+  "description": "Curso de español A1: libro interactivo con audio, traducción y práctica. Creado por Amir Golshan Ebrahimi.",
+  "author": "Amir Golshan Ebrahimi",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Paso a paso · Español A1</title>
+    <meta name="description" content="Curso de español A1: libro interactivo con audio, traducción en 25 idiomas y práctica." />
+    <meta name="theme-color" content="#9f1239" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Paso a paso" />
+    <script>
+      // Open the book from its folder address (…/ rather than …/index.html).
+      (function () {
+        var p = location.pathname;
+        if (/\/index\.html$/.test(p)) history.replaceState(null, "", p.replace(/index\.html$/, "") + location.search + location.hash);
+      })();
+      if ("serviceWorker" in navigator && location.protocol === "https:") {
+        window.addEventListener("load", function () { navigator.serviceWorker.register("./sw.js").catch(function () {}); });
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-B-W18Lla.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DGwDT_q2.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

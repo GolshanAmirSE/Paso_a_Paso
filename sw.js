@@ -1,11 +1,11 @@
-// Keeps the book available offline after the first visit.
-const CACHE = "paso-a-paso-v1";
+// Keeps the book available offline after the first visit. A new version replaces the old one automatically.
+const CACHE = "paso-a-paso-99196929dd";
 const FILES = [
   "./assets/geist-cyrillic-wght-normal-CHSlOQsW.woff2",
   "./assets/geist-latin-ext-wght-normal-DMtmJ5ZE.woff2",
   "./assets/geist-latin-wght-normal-Dm3htQBi.woff2",
-  "./assets/index-B-W18Lla.js",
-  "./assets/index-DGwDT_q2.css",
+  "./assets/index-C79dVaoo.js",
+  "./assets/index-DjMl7kxP.css",
   "./",
   "./index.html",
   "./manifest.webmanifest",
@@ -23,11 +23,10 @@ self.addEventListener("activate", (e) => {
 });
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || new URL(e.request.url).origin !== location.origin) return;
-  e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then(
-      (hit) =>
-        hit ||
-        fetch(e.request).catch(() => (e.request.mode === "navigate" ? caches.match("./index.html") : Response.error())),
-    ),
-  );
+  if (e.request.mode === "navigate") {
+    // The page itself: newest version when online, saved copy when offline.
+    e.respondWith(fetch(e.request).catch(() => caches.match("./index.html")));
+    return;
+  }
+  e.respondWith(caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || fetch(e.request)));
 });

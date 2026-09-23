@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <title>Paso a paso · Español A1</title>
+    <title>Paso a Paso · Español A1</title>
     <meta name="description" content="Curso de español A1: libro interactivo con audio, traducción en 25 idiomas y práctica." />
-    <meta name="author" content="Amir Golshan Ebrahimi" />
+    <meta name="author" content="Amir Golshan" />
     <meta name="theme-color" content="#9f1239" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Paso a paso" />
+    <meta name="apple-mobile-web-app-title" content="Paso a Paso" />
     <script>
       (function () {
         var p = location.pathname;
@@ -24,10 +23,135 @@
         window.addEventListener("load", function () { navigator.serviceWorker.register("./sw.js").catch(function () {}); });
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-B8ifHgFH.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DOw0uznN.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-6Q2n57Jb.css">
+  <style id="boot-css">
+  #boot { position: fixed; inset: 0; z-index: 2147483000; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 18px; padding: 24px; color: #fff; text-align: center; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #9f1239, #4c0519); transition: opacity .45s ease; }
+  #boot.boot-out { opacity: 0; pointer-events: none; }
+  #boot h1 { margin: 0; font: 400 clamp(38px, 9vw, 64px)/1 Georgia, Cambria, "Times New Roman", serif; letter-spacing: .01em; }
+  #boot .boot-sub { margin: -8px 0 0; font: italic 18px Georgia, Cambria, serif; opacity: .92; }
+  #boot svg { width: min(78vw, 360px); height: auto; overflow: visible; }
+  #boot .st { fill: #fff; opacity: .18; transition: opacity .35s ease, transform .35s ease; transform-box: fill-box; transform-origin: bottom; }
+  #boot .st.on { opacity: .92; }
+  #boot .sun { fill: #fcd34d; transition: transform .6s ease; }
+  #boot .boot-bar { width: min(78vw, 360px); height: 8px; border-radius: 99px; background: rgba(255,255,255,.2); overflow: hidden; }
+  #boot .boot-fill { height: 100%; width: 0; border-radius: 99px; background: #fcd34d; transition: width .25s ease; }
+  #boot .boot-pct { font: 700 28px/1 system-ui, -apple-system, sans-serif; font-variant-numeric: tabular-nums; }
+  #boot .boot-msg { margin: -6px 0 0; font-size: 15px; opacity: .92; min-height: 1.2em; }
+  #boot .boot-by { position: absolute; bottom: max(16px, env(safe-area-inset-bottom)); font-size: 12px; opacity: .8; }
+  #boot .boot-err { display: none; max-width: 420px; background: rgba(0,0,0,.25); border-radius: 16px; padding: 16px; }
+  #boot.failed .boot-err { display: block; }
+  #boot.failed .boot-bar, #boot.failed .boot-pct { display: none; }
+  #boot .boot-err p { margin: 0 0 10px; }
+  #boot .boot-err code { display: block; font-size: 12px; opacity: .85; word-break: break-word; margin-bottom: 12px; }
+  #boot button { font: 600 16px system-ui, -apple-system, sans-serif; color: #4c0519; background: #fff; border: 0; border-radius: 12px;
+    padding: 12px 18px; margin: 4px; cursor: pointer; min-height: 44px; }
+  #boot button.ghost { color: #fff; background: transparent; box-shadow: inset 0 0 0 2px rgba(255,255,255,.7); }
+  #boot button:focus-visible { outline: 3px solid #fcd34d; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { #boot, #boot * { transition: none !important; } }
+  @media (forced-colors: active) { #boot .st, #boot .boot-fill { forced-color-adjust: none; } }
+</style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="boot" role="status" aria-live="polite" aria-label="Loading Paso a Paso">
+      <h1 lang="es">Paso a Paso</h1>
+      <p class="boot-sub" lang="es">Curso de español · Nivel A1</p>
+      <svg viewBox="0 0 400 270" aria-hidden="true"><circle class="sun" cx="330" cy="70" r="36"/><rect class="st" x="30.0" y="230.0" width="15.2" height="30.0" rx="5"/><rect class="st" x="51.2" y="220.6" width="15.2" height="39.4" rx="5"/><rect class="st" x="72.5" y="211.2" width="15.2" height="48.8" rx="5"/><rect class="st" x="93.8" y="201.9" width="15.2" height="58.1" rx="5"/><rect class="st" x="115.0" y="192.5" width="15.2" height="67.5" rx="5"/><rect class="st" x="136.2" y="183.1" width="15.2" height="76.9" rx="5"/><rect class="st" x="157.5" y="173.8" width="15.2" height="86.2" rx="5"/><rect class="st" x="178.8" y="164.4" width="15.2" height="95.6" rx="5"/><rect class="st" x="200.0" y="155.0" width="15.2" height="105.0" rx="5"/><rect class="st" x="221.2" y="145.6" width="15.2" height="114.4" rx="5"/><rect class="st" x="242.5" y="136.2" width="15.2" height="123.8" rx="5"/><rect class="st" x="263.8" y="126.9" width="15.2" height="133.1" rx="5"/><rect class="st" x="285.0" y="117.5" width="15.2" height="142.5" rx="5"/><rect class="st" x="306.2" y="108.1" width="15.2" height="151.9" rx="5"/><rect class="st" x="327.5" y="98.8" width="15.2" height="161.2" rx="5"/><rect class="st" x="348.8" y="89.4" width="15.2" height="170.6" rx="5"/></svg>
+      <div class="boot-pct" id="boot-pct">0%</div>
+      <div class="boot-bar" aria-hidden="true"><div class="boot-fill" id="boot-fill"></div></div>
+      <p class="boot-msg" id="boot-msg" lang="es">Cargando el libro…</p>
+      <div class="boot-err" role="alert">
+        <p><strong>The book couldn't open on this device.</strong></p>
+        <code id="boot-why"></code>
+        <button type="button" id="boot-retry">Try again</button>
+        <button type="button" class="ghost" id="boot-clean">Clear saved copy and reload</button>
+      </div>
+      <div class="boot-by">Creado por Amir Golshan</div>
+    </div>
+    <script>
+(function () {
+  var SRC = "./assets/index-ov8YSgOw.js", SIZE = 6432517;
+  var boot = document.getElementById("boot"), root = document.getElementById("root");
+  var pctEl = document.getElementById("boot-pct"), fill = document.getElementById("boot-fill"), msg = document.getElementById("boot-msg");
+  var steps = boot.querySelectorAll(".st"), sun = boot.querySelector(".sun");
+  var target = 0, shown = 0, mounted = false, failed = false, injected = false;
+  function set(p) { if (p > target) target = Math.min(100, p); }
+  function render(p) {
+    var v = Math.floor(p);
+    pctEl.textContent = v + "%";
+    fill.style.width = p + "%";
+    var lit = Math.round((p / 100) * steps.length);
+    for (var i = 0; i < steps.length; i++) steps[i].setAttribute("class", i < lit ? "st on" : "st");
+    sun.style.transform = "translateY(" + (40 - p * 0.4) + "px)";
+  }
+  (function tick() {
+    shown += (target - shown) * 0.18;
+    if (target - shown < 0.4) shown = target;
+    render(shown);
+    if (!mounted || shown < 100) requestAnimationFrame(tick);
+  })();
+  function fail(why) {
+    if (mounted || failed) return;
+    failed = true;
+    boot.className = "failed";
+    msg.textContent = "";
+    document.getElementById("boot-why").textContent = why || "";
+  }
+  document.getElementById("boot-retry").onclick = function () { location.reload(); };
+  document.getElementById("boot-clean").onclick = function () {
+    var jobs = [];
+    try { if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); })); } catch (e) {}
+    try { if (window.caches) jobs.push(caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); })); } catch (e) {}
+    Promise.all(jobs).then(function () { location.reload(); }, function () { location.reload(); });
+  };
+  window.addEventListener("error", function (e) { if (!mounted && injected) fail((e && e.message) || "Script error"); });
+  window.addEventListener("unhandledrejection", function (e) { if (!mounted && injected) fail(String((e && e.reason && (e.reason.message || e.reason)) || "")); });
+  function done() {
+    if (mounted) return;
+    mounted = true;
+    set(100);
+    setTimeout(function () {
+      boot.className = "boot-out";
+      setTimeout(function () { if (boot.parentNode) boot.parentNode.removeChild(boot); var c = document.getElementById("boot-css"); if (c) c.parentNode.removeChild(c); }, 500);
+    }, 380);
+  }
+  new MutationObserver(function () { if (root.children.length) done(); }).observe(root, { childList: true });
+  function inject() {
+    if (injected) return;
+    injected = true;
+    msg.textContent = "Preparando las páginas…";
+    var s = document.createElement("script");
+    s.type = "module";
+    s.crossOrigin = "anonymous";
+    s.src = SRC;
+    s.onerror = function () { fail("The app files could not be downloaded. Check the internet connection."); };
+    document.head.appendChild(s);
+    // While the phone prepares the book, keep moving gently towards 99%.
+    var creep = setInterval(function () { if (mounted || failed) return clearInterval(creep); set(Math.min(99, target + (99 - target) * 0.08)); }, 250);
+  }
+  setTimeout(function () { if (!mounted && !failed) msg.textContent = "Casi listo… (the first visit takes a little longer)"; }, 12000);
+  setTimeout(function () { if (!mounted) fail("The book is taking too long to open."); }, 90000);
+  set(2);
+  try {
+    if (!window.fetch || !window.ReadableStream || !window.Response || !("body" in Response.prototype)) throw 0;
+    fetch(SRC, { credentials: "same-origin" }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      if (!r.body || !r.body.getReader) return r.arrayBuffer().then(function () { set(88); });
+      var rd = r.body.getReader(), got = 0;
+      function pump() {
+        return rd.read().then(function (x) {
+          if (x.done) return set(88);
+          got += x.value.length;
+          set(3 + Math.min(85, (got / SIZE) * 85));
+          return pump();
+        });
+      }
+      return pump();
+    }).then(inject, function () { set(40); inject(); });
+  } catch (e) { set(40); inject(); }
+})();
+</script>
   </body>
 </html>

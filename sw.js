@@ -1,11 +1,11 @@
 // Keeps the book available offline after the first visit. A new version replaces the old one automatically.
-const CACHE = "paso-a-paso-2c2bd299fb";
+const CACHE = "paso-a-paso-0af99b9a55";
 const FILES = [
   "./assets/geist-cyrillic-wght-normal-CHSlOQsW.woff2",
   "./assets/geist-latin-ext-wght-normal-DMtmJ5ZE.woff2",
   "./assets/geist-latin-wght-normal-Dm3htQBi.woff2",
-  "./assets/index-D6AgMIiE.css",
-  "./assets/index-vybj7tN4.js",
+  "./assets/index-4vTCY2ug.js",
+  "./assets/index-AcbIBv-7.css",
   "./",
   "./index.html",
   "./manifest.webmanifest",
@@ -29,6 +29,8 @@ self.addEventListener("fetch", (e) => {
     return;
   }
   const url = new URL(e.request.url);
+  // Parts of big voice files are fetched straight from the website (the app keeps them for offline use itself).
+  if (e.request.headers.has("range")) return;
   if (url.pathname.includes("/audio/")) {
     // Recorded voices: the list is always checked online; the recordings are kept for offline use once played.
     if (url.pathname.endsWith("/index.json")) {

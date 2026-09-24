@@ -1,10 +1,10 @@
 // Keeps the book available offline after the first visit. A new version replaces the old one automatically.
-const CACHE = "paso-a-paso-0af99b9a55";
+const CACHE = "paso-a-paso-ea7cb7fea5";
 const FILES = [
   "./assets/geist-cyrillic-wght-normal-CHSlOQsW.woff2",
   "./assets/geist-latin-ext-wght-normal-DMtmJ5ZE.woff2",
   "./assets/geist-latin-wght-normal-Dm3htQBi.woff2",
-  "./assets/index-4vTCY2ug.js",
+  "./assets/index-5AoMFAIV.js",
   "./assets/index-AcbIBv-7.css",
   "./",
   "./index.html",
